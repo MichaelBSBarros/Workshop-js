@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Workshop - JavaScript</title>
+        <br>
+        <script>
+
+            let idade = prompt('Olá, digite sua idade: ', 'Apenas números, por favor.')
+            let peso = prompt('Digite seu peso: ', 'Peso em Kg')
+            let altura = prompt('Digite sua altura: ', 'Altura em m')
+
+            function calculoIMC(idade,peso,altura){
+                document.write("Sua idade é: "+idade+"; <br>Seu peso é : "+peso+"; <br>Sua altura é: "+altura);
+                let IMC = Math.round(peso/(altura*altura)); 
+                document.write("; <br>Seu IMC é : "+ IMC);
+                if (IMC > 29){
+                    document.write('<p>Você está acima do peso!');
+                }else if(IMC < 20){
+                    document.write('<p>Você está abaixo do peso!');
+                }else if(IMC > 19 && IMC < 30){
+                    document.write('<p>Você está no peso ideal!');
+                }else{
+                    document.write('Não consegui calcular seu IMC :(');
+                };
+            };
+
+            calculoIMC(idade,peso,altura);
+
+        </script>        
+    </head>
+    <body>
+
+    </body>
+</html>
+
